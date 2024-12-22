@@ -1,28 +1,121 @@
-/*Navigation bar*/
-#MenuItems {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(144, 129, 81);
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.header .logo img {
+  height: 50px;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav ul li {
+  margin-left: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.nav ul li a:hover {
+  color: #ff6f61;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background: url('https://via.placeholder.com/800x400') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 80%;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #ff6f61;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #e05b4a;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Responsive Styling for iPhone 12 Pro Max */
+@media screen and (max-width: 430px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  #MenuItems li {
-    float: left;
+
+  .nav ul {
+    flex-direction: column;
+    padding-top: 10px;
   }
-  
-  #MenuItems li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+
+  .nav ul li {
+    margin: 10px 0;
   }
- /*Body*/
-  body {
-    background-color: rgb(168, 196, 141);
+
+  .hero h1 {
+    font-size: 28px;
   }
-/*My work section with image carousel*/
-  .MyWork {
-    text-align: center;
+
+  .hero p {
+    font-size: 16px;
   }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
